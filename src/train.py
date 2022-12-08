@@ -22,4 +22,6 @@ model.fit(X_train, y_train)
 
 # Modell speichern
 path_new = os.path.join("data", "model", "model.sav")
-pickle.dump(model, open(path_new, 'wb'))
+file = open(path_new, 'wb')
+pickle.dump(model, file)
+file.close()
