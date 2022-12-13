@@ -1,5 +1,4 @@
 .venv
 */.ipynb_checkpoints
-/data/model/testdata_features.npy
-/data/model/testdata_target.npy
+/data/model/*
 .DS_Store
