@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import numpy as np
 import pickle
 from sklearn import model_selection
 from sklearn.linear_model import LinearRegression
@@ -15,6 +16,14 @@ target = array[:, 0:1]
 # Splitting der Daten in Test- und Trainingsdaten
 X_train, X_test, y_train, y_test = model_selection.train_test_split(
     features, target, test_size=0.8)
+
+# Testdaten wegspeichern
+path_new_test = os.path.join("data", "model", "testdata_features.npy")
+np.save(path_new_test, X_test)
+
+# path_new_test_target = os.path.join("data", "model", "testdata_target.npy")
+# np.save(path_new_test_target, y_test)
+
 
 # Modell trainieren
 model = LinearRegression()
