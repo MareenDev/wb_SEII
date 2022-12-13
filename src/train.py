@@ -21,9 +21,8 @@ X_train, X_test, y_train, y_test = model_selection.train_test_split(
 path_new_test = os.path.join("data", "model", "testdata_features.npy")
 np.save(path_new_test, X_test)
 
-# path_new_test_target = os.path.join("data", "model", "testdata_target.npy")
-# np.save(path_new_test_target, y_test)
-
+path_new_test_target = os.path.join("data", "model", "testdata_target.npy")
+np.save(path_new_test_target, y_test)
 
 # Modell trainieren
 model = LinearRegression()
