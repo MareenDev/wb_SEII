@@ -1,4 +1,5 @@
 .venv
 */.ipynb_checkpoints
 /data/model/*
+/data/weather/response.txt
 .DS_Store
